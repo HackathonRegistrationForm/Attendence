@@ -1,0 +1,173 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>Attendance Dashboard | By Code Info</title>                    
+  </head>
+  <body class="bg">
+    <div id="popup" *ngIf="showForm">
+      <div class="pop-up-drop"></div>
+      <div class="pop-up">
+      <h1 class="h1">STUDENT ATTENDENCE FORM</h1>   
+      <table class="showForm" border="1">
+         <p  class="btncancel  float-right"type="submit"  (click)="closeForm()">&#10006;</p>
+          <tr>
+              <td><label class="label" for="Studentname">Studentname</label> </td>
+              <td><input class="input" type="text" placeholder="Enter studentname here" id="Studentname" [(ngModel)]="Student.Studentname" required=""></td>
+          </tr>  
+          <tr>
+              <td><label  class="label" for="Studentrollno">Rollno</label> </td>
+              <td><input class="input" type="text" placeholder="Enter studentrollno here" id="Rollno"  [(ngModel)]="Student.Rollno" required=""></td>
+          </tr>  
+          <tr>
+              <td><label  class="label" for="Proffesorname">Professorname</label> </td>
+              <td><input class="input" type="text" placeholder="Enter proffesorname here" id="Professorname"  [(ngModel)]="Student.Professorname" required></td>
+          </tr>
+          <tr>
+              <td> <label class="label" for="">Date Of Birth</label> </td>
+              <td><input class="input" type="date"  [(ngModel)]="Student.DateofBirth" id="dateofbirth" required="" ></td>
+          </tr>
+          <tr>
+              <td> <label class="label" for="">Phonenumber</label> </td>
+              <td><input class="input" type="phonenumber"  [(ngModel)]="Student.Phonenumber" id="Phonenumber" required="required"></td>
+          </tr>
+          <tr>
+              <td> <label class="label" for="">Rg.number</label> </td>
+              <td><input class="input" type="Rg.number"  [(ngModel)]="Student.Rgnumber" id="Rgnumber" required="required"></td>
+          </tr>
+          <tr>
+            <td> <label class="label" for="">Attendence</label> </td>
+            <td> <select class="input" id=""[(ngModel)]="Student.Attendance">
+              <option value=""></option>
+              <option value="Present">Present</option>
+              <option value="Absent">Absent</option>
+            </select></td>     
+        </tr>     
+    <td> 
+      <button class="btn"  (click)="onAdd()" *ngIf="save" type="submit">Save</button><br>   
+      <button class="btn"  (click)="onUpdate()"  *ngIf="update"  type="submit"  >Update</button><br>   
+    </td>
+      </table>
+      <br>
+  </div>
+  </div>   
+  <div> 
+  <div >
+  </div>
+  <div class="containerdiv">
+  <div class="button"><button class="bt" (click)="toggleclass()"  type="submit"> Class  Details</button></div> 
+  </div>
+      <div class="container">   
+        <table  *ngIf="class" matsort>
+          <section class="main">       
+          <h1 class="h1" style="font-size:50px;">Attendance List</h1> 
+           <button type="button" class="btnadd" (click)="openForm()">AddStudent</button>   
+        <section class="attendance">
+          <div class="attendance-list">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Studentname</th>
+                  <th>Rollno</th>
+                  <th>Professorname</th>
+                  <th>Dateofbirth</th>
+                  <th>Phonenumber</th>
+                  <th>Rgnumber</th>
+                  <th>Attendence</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let text of texts">   
+                  <td>
+                    <div>
+                      {{text.Studentname}}
+                    </div>
+                    </td>
+                  <td>
+                    <div>{{text.Rollno}}
+                    </div>
+                    </td>               
+                  <td>
+                    <div>{{text.Professorname}}</div>
+                  </td>
+                  <td><div>{{text.DateofBirth}}</div></td>
+                  <td><div>{{text.Phonenumber}}</div>               
+                  </td>
+                  <td>
+                    <div>{{text.Rgnumber}}</div>
+                  </td>
+                  <td>
+                    <div>{{text.Attendance}}</div>
+                  </td> 
+                  <td><button class="btn1" (click)="openFormedit(text)">Edit</button>
+                     <button  class="btn1" (click)="view(text)"  >View</button>
+                    <button class="btn1" (click)="onDelete(text.sid)" >Delete</button>
+                        <div id="addpopup" *ngIf="Showpopup">   
+                        <div class="pop-up-drop1"></div> 
+                        <div class="pop-up1">
+                          <p  class="btncancel2 float-right"type="submit"  (click)="addcloseForm()">&#10006;</p>
+                          <div class="users ">
+                            <div class="card">
+                              <img src="data:image/jpeg;base64,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"> 
+                              <h1 style="color: #eff3f1;font-weight: 900;"> {{Student.Studentname}}</h1> 
+                              <div >
+                                <table border="1">  
+                                  <tr>
+                                    <td><h3> Roll No:  {{Student.Rollno}} </h3></td>  
+                                  </tr>
+                                  <tr>
+                                    <td><h3>Professor Name:  {{Student.Professorname}}</h3></td>
+                                  </tr>
+                                  <tr>
+                                    <td><h3>Phone Number:  {{Student.Phonenumber}}</h3></td>
+                                  </tr>
+                                  <tr>
+                                    <td><h3>Date of birth:{{Student.DateofBirth}}</h3></td>  
+                                  </tr>    
+                                  <tr>
+                                    <td><h3>Rgnumber:{{Student.Rgnumber}}</h3></td>  
+                                  </tr>
+                                  <tr>
+                                    <td><h3>Attendence:{{Student.Attendance}}</h3></td>  
+                                  </tr>   
+                                </table> 
+                              </div> 
+                            </div>
+                        </div>
+                        <div class="textareacomment">
+                        <textarea type="text" class="txtareawidth" placeholder="Add your Comment here"   [(ngModel)]="comments.Comment"></textarea>
+                      </div>      
+                      <button type="submit" (click)="SaveComment()">Post Comment</button>  
+                      <table class="table">
+                        <thead>                      
+                            </thead>
+                            </table>
+                            <tbody border="1">
+                              <h2 class="div" style="color:rgb(42, 155, 31); ">Comments:</h2>
+                              <tr *ngFor="let texts of addtext" >                          
+                          <td><div>{{texts.Comment}}</div>    </td>
+                              </tr>
+                            </tbody>
+                              </div>
+                              </div>          
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </table> 
+    </div>
+  </div>
+  </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
