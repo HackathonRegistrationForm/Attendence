@@ -15,14 +15,7 @@ body {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  /* a{
-    position: relative;
-    width: 280px;
-    font-size: 14px;
-    color: rgb(85, 83, 83);
-    display: table;
-    padding: 10px;
-  } */
+
   
   .column {
     float: left;

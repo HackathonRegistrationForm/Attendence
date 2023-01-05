@@ -11,12 +11,7 @@
     height: 1000px;
     width: 1000px;
 }
-input{
-    width:300px;
-    height:20px;
-    border-radius: 20px;
-    padding: 17px;
-}
+
 
 mat-nav-list{
     background-color:rgb(67, 146, 250);
@@ -183,141 +178,12 @@ nav .fas{
 }
 
 
-.logout{
-  position: absolute;
-  bottom: 0;
-}
+
 
 .container{
   display: flex;
 }
 
-/* MAin Section */
-.main{
-  position: relative;
-  padding: 20px;
-  width: 100%;
-}
-.main-top{
-  display: flex;
-  width: 100%;
-}
-.main-top i{
-  position: absolute;
-  right: 0;
-  margin: 10px 30px;
-  color: rgb(110, 109, 109);
-  cursor: pointer;
-}
-.main .users{
-  display: flex;
-  width: 100%;
-}
-.users .card{
-  width: 25%;
-  margin: 10px;
-  background: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-.users .card img{
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-.users .card h4{
-  text-transform: uppercase;
-}
-.users .card p{
-  font-size: 12px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-.users table{
-  margin:  auto;
-}
-.users .per span{
-  padding: 5px;
-  border-radius: 10px;
-  background: rgb(223, 223, 223);
-}
-.users td{
-  font-size: 14px;
-  padding-right: 15px;
-}
-.users .card button{
-  width: 100%;
-  margin-top: 8px;
-  padding: 7px;
-  cursor: pointer;
-  border-radius: 10px;
-  background: transparent;
-  border: 1px solid #4AD489;
-}
-.users .card button:hover{
-  background: #4AD489;
-  color: #fff;
-  transition: 0.5s;
-}
-
-/*Attendance List serction  */
-.attendance{
-  margin-top: 20px;
-  text-transform: capitalize;
-}
-.attendance-list{
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-.table{
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 15px;
-  min-width: 100%;
-  overflow: hidden;
-  border-radius: 5px 5px 0 0;
-}
-table thead tr{
-  color: #fff;
-  background: #34AF6D;
-  text-align: left;
-  font-weight: bold;
-}
-.table th,
-.table td{
-  padding: 12px 15px;
-}
-.table tbody tr{
-  border-bottom: 1px solid #ddd;
-}
-.table tbody tr:nth-of-type(odd){
-  background: #f3f3f3;
-}
-.table tbody tr.active{
-  font-weight: bold;
-  color: #4AD489;
-}
-.table tbody tr:last-of-type{
-  border-bottom: 2px solid #4AD489;
-}
-.table button{
-  padding: 6px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #4AD489;
-}
-.table button:hover{
-  background: #4AD489;
-  color: #fff;
-  transition: 0.5rem;
-}
 
 
 
@@ -336,15 +202,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-ul,
-li {
-    list-style: none !important;
-}
 
-.clear {
-    height: 0px;
-    clear: both !important;
-}
 
 a,
 
@@ -427,11 +285,7 @@ button {
     margin-bottom: 3%;
 }
 
-    .howItWorksWrapper h1 {
-        text-align: center;
-        color: #0f3d4c;
-        margin-bottom: 25px;
-    }
+    
 
 .howItWorks {
     text-align: center;
@@ -675,101 +529,12 @@ background-color: whitesmoke;
     color: #fff;
     transition: 0.5s;
   }
-  .Rbutton{
-  
-   float: left;
   
 
-    cursor: pointer;
-    padding: 5px;
- 
-    background: transparent;
-color: #4a88bf;
-    border: 1px solid #4a88bf;
-    
-  } 
- .Rbutton:hover{
-    background:#4a88bf;
-  color: white;
-    transition: 0.5s;
-  }
 
-.href {
-  background-color: #4a88bf; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 26px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
 
- 
-}
-.href:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: white;
-  color:#4a88bf ;
-  border-radius: 16px;
-}
-.contact-sec .contact-ul li,
-.contact-ul b {
-  font-size: 20px;
-  margin: 10px 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  word-wrap: break-word;
-}
 
-.contact-sec .contact-ul i {
-  font-size: 18px;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-.contact-detail a {
-  color: #000;
-  text-decoration: none;
-}
 
-.contact-sec .contact-ul li b:hover {
-  color: #f93;
-}
-
-.contact-sec .contact-ul li .fa-location-dot {
-  color: #f44337;
-  border: 2px solid #f4433790;
-}
-
-.contact-sec .contact-ul li .fa-phone {
-  color: #00b055;
-  border: 2px solid #00b05590;
-}
-
-.contact-sec .contact-ul li .fa-envelope {
-  color: #ff6347;
-  border: 2px solid #ff634790;
-}
-.contact-sec .contact-ul li,
-.contact-ul b {
-  font-size: 18px;
-}
-
-.contact-sec .contact-ul i {
-  font-size: 14px;
-  padding: 6px;
-  margin-right: 6px;
-}
-@media (max-width: 480px) {
-  .contact-sec .contact-ul li,
-  .contact-ul b {
-    font-size: 16px;
-  }
-}
 
 
 

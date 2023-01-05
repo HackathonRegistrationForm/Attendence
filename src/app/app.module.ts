@@ -8,12 +8,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AttendenceComponent } from './attendence/attendence.component';
+//import { AttendenceComponent } from './attendence/attendence.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ClassoneComponent } from './classone/classone.component';
 import { ClassfourComponent } from './classfour/classfour.component';
 import { FormsModule } from '@angular/forms';
-import { AttendeeComponent } from './attendee/attendee.component';
+//import { AttendeeComponent } from './attendee/attendee.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -31,11 +31,11 @@ import { LoginComponent } from './login/login.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ForgotComponent } from './forgot/forgot.component';
+//import { ForgotComponent } from './forgot/forgot.component';
 import {DataTablesModule} from 'angular-datatables';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { DatePipe } from '@angular/common';
-import { TestComponent } from './test/test.component';
+//import { TestComponent } from './test/test.component';
 
 
 
@@ -45,22 +45,22 @@ import { TestComponent } from './test/test.component';
    
  
     AppComponent,
-    AttendenceComponent,
+    //AttendenceComponent,
     
     ClassesComponent,
     ClassoneComponent,
     ClassfourComponent,
 FormComponent,
-    AttendeeComponent,
+    //AttendeeComponent,
     StudentComponent,
     ClasstwoComponent,
     LoginComponent,
     AboutusComponent,
     ContactusComponent,
     ProfileComponent,
-    ForgotComponent,
+   // ForgotComponent,
  
-    TestComponent,
+   // TestComponent,
  
 
   
