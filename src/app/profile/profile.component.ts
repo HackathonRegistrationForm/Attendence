@@ -43,7 +43,6 @@ export class ProfileComponent implements OnInit {
   }
   edit()
   {
-    debugger
     this.editform=true; 
    
   }

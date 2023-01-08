@@ -46,7 +46,7 @@ export class FormComponent implements OnInit {
 })                                                            
   }
   else{
-      window.location.href="/classes" 
+      window.location.href="./classes" 
   }
   }
   
