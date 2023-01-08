@@ -66,7 +66,7 @@ onsubmit(data:any){
        this.data=JSON.parse(localdata);                                        //Convert to json format and assign into data array
  this.datas=this.data;                                                        //assigned to data array into datas array
   }
-  const records = this.datas.filter((item: any ) => item.Classlist === data[1].Classlist);    //Here we check the array vales to take one record then check the condition its comparible or not
+  const records = this.datas.filter((item: any ) => item.Classlist === data[0].Classlist);    //Here we check the array vales to take one record then check the condition its comparible or not
   console.log(records)
 localStorage.setItem('attendenceform',JSON.stringify(records))                 //the condition is true set the values into key format
 }
@@ -119,6 +119,7 @@ ClassR()
 
 Yes(datas:any)
 {
+
   const now = Date.now();                                           //we assign current date here
   const myFormattedDate = this.pipe.transform(now);                  //transform into pipe format
   const localdata = localStorage.getItem('AttendenceRecord')          //Assign attendencercord values into localdata  
