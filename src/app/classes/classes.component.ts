@@ -41,11 +41,11 @@ export class ClassesComponent implements OnInit {
       if(this.login.length==0)
       {
         Swal.fire( "Do you want to add Employee? <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-          window.location.href="/form";
+          window.location.href="./form";
       })
     }
     else{
-      window.location.href="/classfour";
+      window.location.href="./classfour";
     }
     }
 classA()
@@ -54,7 +54,7 @@ classA()
   if(this.login.length==0)
   {
     Swal.fire( "Do you want to give attendence? <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-      window.location.href="/form";
+      window.location.href="./form";
   })
 }
 else{
@@ -64,14 +64,14 @@ for(let i=0;i<this.List.length;i++){
   var data1=this.List[i]
 }
 localStorage.setItem('classone',JSON.stringify(this.List))
-window.location.href="/classone"
+window.location.href="./classone"
 }
 }
 classB(){
   if(this.login.length==0)
   {
     Swal.fire( "Do you want to give attendence? <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-      window.location.href="/form";
+      window.location.href="./form";
   })
 }else
 {
@@ -82,14 +82,14 @@ for(let i=0;i<this.List.length;i++){
   console.log(data1)
 }
 localStorage.setItem('classone',JSON.stringify(this.List))
-window.location.href="/classone"
+window.location.href="./classone"
 }
 }
 classC(){
   if(this.login.length==0)
   {
     Swal.fire( "Do you want to give attendence? <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-      window.location.href="/form";
+      window.location.href="./form";
   })
 }else
 {
@@ -99,14 +99,14 @@ for(let i=0;i<this.List.length;i++){
   var data1=this.List[i]
 }
 localStorage.setItem('classone',JSON.stringify(this.List))
-window.location.href="/classone"
+window.location.href="./classone"
 }
 }
 classD(){
   if(this.login.length==0)
   {
     Swal.fire( "Do you want to give attendence? <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-      window.location.href="/form";
+      window.location.href="./form";
   })
 }else
 {
@@ -117,19 +117,19 @@ for(let i=0;i<this.List.length;i++){
 }
 
 localStorage.setItem('classone',JSON.stringify(this.List))
-window.location.href="/classone"
+window.location.href="./classone"
 }
 }
 profile(){
   if(this.login.length==0)
   {
     Swal.fire( "Do you want Update your Profile <br> Please Login!!", '', 'error').then(() => {                   //Error messsage will be displayed
-      window.location.href="/form";
+      window.location.href="./form";
   })
 }else
 
 {
-  window.location.href="/profile"; 
+  window.location.href="./profile"; 
 }
 }
 }
